@@ -1,4 +1,10 @@
-#include <IRremote.h>     // Download & include library from https://github.com/pravindesai/Arduino-IRremote
+/*
+  send a number to arduino via bluetooth & arduino transmits the ir Signal for 
+  that number via Ir-Led connected to PWM pin 3.
+  to Work with this code , raw data of signals with in the function must
+  be changed according to your IrSignals.
+*/
+#include <IRremote.h>     // Download & include library Arduino-IRremote
 #include <SoftwareSerial.h>
 
 //  * An IR LED must be connected to Arduino PWM pin 3.
@@ -11,7 +17,7 @@ String voice;
 unsigned int x = 8950;    // x is used in array instead of 8950 to save memory /*/*/*/*/
 
             /*
-             * Decode your TV remotes signals using code example ' IRrecvDumpV2 ' in library https://github.com/pravindesai/Arduino-IRremote
+             * Decode your TV remotes signals using code example ' IRrecvDumpV2 ' in library Arduino-IRremote
              * And replace following Arrays with your Signals_Array 
              */
 
